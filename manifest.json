@@ -6,7 +6,18 @@
 	"version": "0.0.1",
 	"permissions": [
 		"contextMenus",
-		"tabs"
+		"tabs",
+		"activeTab",
+		"http://*/*",
+		"https://*/*"
+	],
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["content_script.js"]
+
+		}
+		
 	],
 	"icons": {
     	"16": "images/Yale.png"
